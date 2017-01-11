@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+ <head>
+	  <title>Rajendra Bhawan</title>
+	  <link rel="icon" type="image/png" href="logo.png">
+	  <link rel="stylesheet" href="rjbstyle.css" type="text/css"/>
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+ </head>
+<body>
+	<div class="notice">
+	  <header>
+	    <img src="name.png" width="90%" height="20%">
+	 </header>
+	
+	
+	<div class="show">
+	<div class="left"> <i class="fa fa-arrow-circle-left fa-3x"  onclick="left();" aria-hidden="true"></i></div>
+
+	<div class="js">
+	 
+	<ul>
+	 <li><img class="test" src="rjb.jpg" style="width:500px"></li>
+	  <li><img class="test" src="rjbgate.jpg" style="width:500px"></li>
+	  <li><img class="test" src="MESS.jpg" style="width:500px"></li>
+	  <li><img class="test" src="CANTEEN.jpg" style="width:500px"></li>
+	  </ul>
+	 
+	</div>
+	<div class="right"><i class="fa fa-arrow-circle-right fa-3x" onclick="right();" aria-hidden="true"></i></div>
+	</div>
+	
+	 
+	 <nav>
+	  <ul>
+		  <li><a href="rjb.htm">Home</a></li>
+		  <li><a href="council.htm">Council</a></li>
+		  <li><a href="facility.htm">Facilities</a></li>
+		  <li><a href="activity.htm">Activities</a></li>
+		  <li><a href="notice.htm">Notices</a></li>
+		  <li><a href="contact.php">Contact</a></li>
+	   </ul>
+	  </nav>
+	</div>
+	
+	<script>
+	var x =0;
+    function left(){
+    	document.getElementsByClassName("js")[0].style.right="-535px";
+    }
+    function right(){
+    	x+=500;
+    	if(x==2000){x=0;}
+    	document.getElementsByClassName("js")[0].style.left='-' + parseInt(x+41) + 'px';
+    	duration: 3000;
+    }
+	</script>
+	</body>
+	</html>

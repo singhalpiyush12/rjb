@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+ <head>
+	  <title>Rajendra Bhawan</title>
+	  <link rel="icon" type="image/png" href="logo.png">
+	  <link rel="stylesheet" href="rjbstyle.css" type="text/css"/>
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <script src="jquery-3.1.1.min.js"></script>
+ </head>
+<body>
+	<div class="activity">
+	  <header>
+	    <img src="name.png" width="90%" height="20%">
+	 </header>
+
+	 
+	 <nav>
+	  <ul>
+		  <li><a href="rjb.htm">Home</a></li>
+		  <li><a href="council.htm">Council</a></li>
+		  <li><a href="facility.htm">Facilities</a></li>
+		  <li><a href="activity.htm">Activities</a></li>
+		  <li><a href="notice.htm">Notices</a></li>
+		  <li><a href="contact.php">Contact</a></li>
+	   </ul>
+	  </nav>
+	</div>
+	<div class="slider">
+	   
+       <div class="image">
+	  <img class="mySlides" src="rjb.jpg" style="width:100%">
+	  <img class="mySlides" src="rjbgate.jpg" style="width:100%">
+	  <img class="mySlides" src="MESS.jpg" style="width:100%">
+	  <img class="mySlides" src="CANTEEN.jpg" style="width:100%">
+      </div>
+  	 <button class="rotate">rotate</button>
+</div>
+
+
+<script>
+$(".image").ready(function(){
+	$(".rotate").click(function(){
+		$(".image").css("transform","rotate(360deg)");
+	});
+});
+var slideIndex = 1;
+showDivs(slideIndex);
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (slideIndex > x.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) { 
+     x[i].style.display = "none";  
+  }
+   x[slideIndex-1].style.display ="block";
+   document.getElementsByClassName("image")[0].style.animation="rotate 3s infinite";
+   $(".mySlides").fadeOut(6000);
+       slideIndex++;
+      
+       setTimeout(showDivs, 4000);
+}
+</script>
+
+	</body>
+	</html>
